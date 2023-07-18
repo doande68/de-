@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhập điểm học viên
+    let diem = +prompt("nhập số điểm")
+    if( diem > 80 && diem <100){
+        alert("Học sinh tốt")
+    } else if(diem <80 && diem >70){
+        alert("Học sinh khá")
+    } else if (diem < 70 && diem >50){
+        alert( "Học sinh trung bình")
+    } else if ( diem <50){
+        alert("Học sinh kém")
+    }
+
+
+//Nhập vào a, b. Nếu a>b in ra tổng, nếu a<b in ra tích, nếu a =b in ra 'Hihi'
+    let a = +prompt("Nhâp a bất kỳ: ");
+     let b = +prompt("Nhâp b bất kỳ: ");
+     if(a>b) {
+       alert(a+b);
+     } else if (a<b) {
+       alert(a*b);
+     } else {
+       alert("hihi");
+     }
+//Nhập và a, in ra 'Hello' nếu a chẵn, 'Hi' nếu a lẻ
+    let so = +prompt("nhập số")
+    if ( so %2==0){
+        alert("hello")
+    }
+    else {
+        alert("hi")
+    }
+
+
+</script>
+</body>
+</html>

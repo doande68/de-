@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+Nhập số nguyên :
+<input type="text" id="so">
+<button onclick="laydulieu()">kiểm tra</button>
+<p id="result">
+<body>
+<script>
+    function laydulieu(){
+        let soa = document.getElementById("so").value
+        if(soa > 0 ){
+            document.getElementById('result').innerHTML="lớn hơn 0"
+        }
+        if(soa <0){
+            document.getElementById('result').innerHTML="nhỏ hơn 0"
+        }
+
+    }
+</script>
+</body>
+</html>

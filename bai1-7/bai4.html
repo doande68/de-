@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+Nhập số a:
+<input type="text" id="soa"><br><br>
+Nhập số b
+<input type="text" id="sob"><br><br>
+Nhập số c
+<input type="text" id="soc"><br><br>
+<button onclick="Maxabc()">Kiểm tra </button>
+<p id="result">
+<body>
+<script>
+  function Maxabc(){
+      let a = +document.getElementById('soa').value;
+      let b = +document.getElementById('sob').value;
+      let c = +document.getElementById('soc').value;
+       if(a < b){
+           if(b < c){
+               document.getElementById('result').innerHTML ="Số lớn nhất là" + c
+               }else {
+               document.getElementById('result').innerHTML ="Số lớn nhất là" + b
+           }
+           }else {
+           if(a <c ){
+               document.getElementById('result').innerHTML ="Số lớn nhất là" + c
+           }else {
+               document.getElementById('result').innerHTML ="Số lớn nhất là" + a
+           }
+       }
+  }
+
+</script>
+</body>
+</html>

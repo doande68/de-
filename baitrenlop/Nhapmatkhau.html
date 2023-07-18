@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>Tài khoản: <input type="text" id="username" onchange="changeResult()"></p>
+<p id="right-user"></p>
+<button onclick="show()">Đăng nhập</button>
+<p id="Result2" </p>
+<body>
+<script>
+  function changeResult() {
+    let username = document.getElementById("username").value;
+    let result;
+    if (username == "Admin") {
+      document.getElementById('right-user').innerHTML = "Mật khẩu: <input type='password' id='password'>";
+      result = '';
+      show();
+    } else if (username == 'null') {
+      result = "Canceled";
+    } else {
+      result = "I don't know you";
+    }
+    document.getElementById("Result2").innerHTML = result;
+  }
+  function show() {
+    let password = document.getElementById('password').value;
+    let result;
+    if (password == "TheMaster") {
+      result = "Welcome";
+    } else if (password == "null") {
+      result = "Canceled"
+    } else {
+      result = "Wrong password";
+    }
+    document.getElementById("Result2").innerHTML = result;
+  }
+</script>
+</body>
+</html>
