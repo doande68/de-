@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    b1
+    let nhietdo = +prompt("nhập nhiệt độ")
+    let f = nhietdo * 9/5  + 32
+    alert(f)
+b2
+    let m = +prompt("nhập số")
+    let ft = m * 3.2808
+    alert(ft)
+b3
+    let a = +prompt("nhập số ")
+    let b = a * a
+    alert(b)
+b4
+    let a = +prompt("nhập số ")
+    let b = +prompt("nhập số ")
+    let c = a * b
+    alert(c)
+
+b5
+    let a = +prompt("nhập số ")
+    let b = +prompt("nhập số ")
+    let c =  (a*a)-(b*b)
+    alert(c)
+b6
+    let a = +prompt("nhập số ")
+    let b = +prompt("nhập só ")
+    let c = -a/b
+    alert(c)
+b7
+    alert("ax ^ 2 + b = 0")
+    let a = prompt("Nhập a: ");
+    let b = prompt("Nhập b: ");
+    let result = Math.sqrt(-b/a);
+    alert(result)
+b8
+    let tuoi = +prompt("nhập số")
+    if ( tuoi <120 && tuoi > 0){
+        alert("bạn đủ tuổi ")
+    } else {
+        alert("đây ko phải tuổi người")
+    }
+b9
+    let a = +prompt("nhập số a: ");
+    let b = +prompt("nhập số b: ");
+    let c = +prompt("nhập số c: ");
+    if (a > 0 && b > 0 && c > 0) {
+        if (a + b > 0 && b + c > 0 && a + c > b)
+            alert("a, b, c đều là cạnh của 1 tam giác")
+    } else {
+        alert("a, b, c không phải cạnh của 1 tam giác")
+    }
+b10
+    let sodien = +prompt("nhập số điện")
+    let giadien = 0;{
+        if( sodien < 20){
+            giadien = sodien * 2
+            alert("số tiền điện bạn phải trả là")
+        }
+        if (sodien > 20 && sodien < 40){
+            giadien = sodien * 2
+            alert("số tiền điện bạn phải trả là")
+        }
+        if ( sodien > 50){
+            giadien = sodien * 2
+            alert(" số tiền điện bạn phải trả là")
+        }
+
+b11
+        // thuế thu nhập cá nhân
+        let doanhthu = +prompt("nhập số dt")
+        let thue = 0;
+        if ( doanhthu <= 5 ){
+            ( thue = doanhthu * 5/100)
+            alert("số tiền thuế mà bạn phải nộp là" + thue)
+        }
+        else  if ( doanhthu >= 15 && doanhthu >10){
+            ( thue = doanhthu * 13/100)
+            alert("số tiền thuế mà bạn phải nộp là" + thue)
+        }
+        else if ( doanhthu >= 50 && doanhthu >15){
+            ( thue = doanhthu * 35/100)
+            alert("số tiền thuế mà bạn phải nộp là" + thue)}
+
+b12
+        //Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+
+        x = 100; 0.01
+        x = 100*(1+0.01) = 101;
+        x = 101*(1+0.01)
+        Math.pow(5, 3)
+
+        let sotiengoc = +prompt("nhập số tiền")
+        let sothang = +prompt("nhập số tháng")
+        let laixuat = +prompt("nhập lãi xuất hàng tháng")
+        alert(sotiengoc * sothang* Math.pow(laixuat,sothang) )
+
+</script>
+</body>
+</html>

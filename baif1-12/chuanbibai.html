@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//Vòng lặp (loop)
+  •Vòng lặp cho phép tự động thực hiện một khối lệnh lặp đi lặp
+lại nhiều lần dựa vào một điều kiện cho trước
+•Vòng lặp giúp cho lập trình viên viết được các mã nguồn
+ngắn gọn hơn so với việc phải viết lặp lại những dòng mã
+tương tự nhau
+•Vòng lặp bao gồm:
+• Một điều kiện để đánh giá (lúc nào thì lặp?)
+• Một khối lệnh để thực thi (lặp cái gì?)
+•Các vòng lặp hỗ trợ bởi JavaScript: for, while và do-while
+demo
+
+// lệnh break
+
+Lệnh break dùng để thoát khỏi vòng lặp mà không đi tới điểm
+cuối
+• Khi gặp câu lệnh này trong vòng lặp, chương trình sẽ thoát ra khỏi
+vòng lặp và chỉ đến câu lệnh liền sau nó
+• Nếu nhiều vòng lặp thì break sẽ thoát ra khỏi vòng lặp gần nhất.
+• Ngoài ra, break còn được dùng trong cấu trúc lựa chọn switch
+demo
+
+    var text = ""
+    var i ;
+    for ( i = 0; i < 6 ; i++);{
+    if (i === 3){
+        break
+    }
+    text += "the number is " + i + "<br>";
+    }
+
+
+
+  //  Câu lệnh continue
+• Lệnh continue để nhảy qua một phần của khối lệnh và bắt
+    đầu dòng tiếp theo.
+•Khi gặp lệnh này trong các vòng lặp, chương trình sẽ bỏ qua
+    phần còn lại trong vòng lặp và tiếp tục thực hiện lần lặp tiếp
+    theo
+    //demo:
+    for (var i = 1; i <= 8; i++)
+    {
+        if (i === 4) {
+            continue;
+        }
+        text += "the number is " + i + "<br>";
+    }
+    Bỏ qua giá trị 4
+
+//Vòng lặp lồng nhau (nested loops)
+    •Một vòng lặp có thể được đặt bên trong một vòng lặp khác
+•Không hạn chế số lượng vòng lặp lồng nhau
+//demo
+    for (var i = 0; i < 5; i++){
+        for (var j = 0; j < 10; j++){
+            console.log("*");
+        }
+        console.log();
+    }
+
+    //Vòng lặp while:
+    - Vòng lặp while dùng để lặp lại việc thực thi một đoạn mã nếu điều kiện mà ta đưa ra vẫn còn đúng.
+        //demo:
+    var i = 1;
+    while(i < 8){
+        document.write(i + "<br>");
+        i++;
+    }
+    //Vòng lặp do while:
+        - Vòng lặp do while dùng để lặp lại việc thực thi một đoạn mã nếu điều kiện mà ta đưa ra vẫn còn đúng.
+        //demo:
+        var i = 1;
+    do{
+        document.write(i + "<br>");
+        i++;
+    }while(i < 18);
+</script>
+</body>
+</html>
