@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let a = +prompt(" NHập a")
+    let b = +prompt(" Nhập b")
+    let tong = 0
+    if (a < b) {
+        for (let i = a; i <= b; i++) {
+            if (i % 5 === 2) {
+                tong = tong + i
+            }
+        }
+    }
+    if (a > b) {
+        for (let i = b; i <= a; i++) {
+            if (i % 5 === 2) {
+                tong = tong + i
+            }
+        }
+    }
+    document.getElementById("result").innerHTML = result;
+</script>
+</body>
+</html>

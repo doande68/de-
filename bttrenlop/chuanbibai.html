@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  Vòng lặp While
+•Vòng lặp while thực thi lặp lại một khối lệnh
+  nếu biểu thức điều kiện trả về giá trị đúng
+
+  •Cú pháp:
+      Trong đó:
+      • loop-continuation-condition : là biểu thức điều kiện
+• statement(s): là các câu lệnh được thực thi trong
+  mỗi lần lặp
+// demo
+  var text = 'hello';
+  while (text !== 'q'){
+      document.write(text + '<br>');
+      text = prompt('enter a text to print . enter "q" to quit.');
+  }
+  Lặp với điều kiện phức tạp
+•Nhập vào một chuỗi để in ra trang web
+•Nhập vào ký tự ”q” hoặc ký tự rỗng để thoát vòng lặp
+//demo
+  var text = 'hello';
+  while (text !== 'q'&& text !== ''){
+      document.write(text + '<br>');
+      text = prompt('enter a text to print . enter "q" or empty to quit.');
+  }
+   Vòng lặp do-while
+     cú pháp
+           do {
+          statements(s);
+               } while (loop-continuation-condition)
+
+  •Điểm khác biệt giữa while và do-while: Thân
+  của vòng lặp do-while được thực hiện ít nhất là
+  một lần. Kể cả khi biểu thức điều kiện trả về
+  sai.
+      do-while: Ví dụ
+• Tính tổng các số nguyên:
+      • Tính tổng của các số được nhập vào từ bàn phím
+• Nếu nhập vào số 0 thì kết thúc chương trình
+
+  var sum = 0
+  var number;
+           do{
+               number = parseInt( prompt('enter a number'));
+               sum +=number ;
+           } while ( number != 0)
+  document.write("the sum is: "+ sum);
+
+  Lựa chọn while hay for?
+      •Các loại vòng lặp có thể được sử dụng thay thế cho nhau
+•Việc lựa chọn vòng lặp cho phù hợp với từng tình huống là
+  quan trọng
+•Khác biệt thông thường nhất giữa for và while:
+• for thường được sử dụng khi biết trước số lần lặp
+• while thường được sử dụng khi không biết số lần lặp
+
+</script>
+</body>
+</html>
