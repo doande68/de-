@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // x = 100; 0.01
+  // x = 100*(1+0.01) = 101;
+  // x = 101*(1+0.01)
+  // Math.pow(5, 3)
+
+  let sotiengoc = +prompt("nhập số tiền")
+  let sothang = +prompt("nhập số tháng")
+  let laixuat = +prompt("nhập lãi xuất hàng tháng")
+  alert(sotiengoc * sothang* Math.pow(laixuat,sothang) )
+</script>
+</body>
+</html>
