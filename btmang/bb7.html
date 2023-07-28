@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1,2,3,4,5,6,7,8,9,10]
+    let V = prompt("Nhập số nguyên tố")
+    if (a.indexOf(V) >=0){
+      document.write(V + "thuộc mảng")
+        a.splice(a.indexOf(V),1)
+        console.log("mảng sau khi xóa "+V+ " là: "+a)
+    }else {
+        document.write( "ko thuộc mảng")
+    }
+</script>
+</body>
+</html>

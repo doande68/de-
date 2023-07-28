@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  Mảng 2 chiều
+  •Mảng hai chiều là mảng nhiều chiều được sử dụng phổ biến
+  •Mảng hai chiều bao gồm các phần tử, mỗi phần tử là một
+  mảng một chiều.
+  •Mảng hai chiều là một bảng gồm n dòng và m cột:
+
+  cách khởi tạo mảng 2 chiều
+  cách 1
+  let name = [
+          ['de','duc','hieu']
+          ['linh','dan','lam']
+  ]
+
+  // duyệt mảng 2 chiều
+  for(let i=0;i<array.length;i++) {
+    for(let j=0;j<array[i].length;j++) {
+      console.log(array[i][j]);
+    }
+  }
+  document.write('<br>')
+
+
+          // Tìm số lớn nhất trong mảng 2 chiều
+  let max = array[0][0];
+  for(let i=0;i<array.length;i++) {
+    for(let j=0;j<array[i].length;j++) {
+      if (max < array[i][j]) {
+        max = array[i][j];
+      }
+    }
+  }
+  console.log("Max number is "+max);
+
+  // Tìm số nhỏ nhất trong mảng 2 chiều
+  let min=array[0][0]
+  for(let i=0;i<array.length;i++) {
+    for(let j=0;j<array[i].length;j++) {
+      if (min > array[i][j]) {
+        min = array[i][j];
+      }
+    }
+  }
+  console.log("Min number is "+min);
+</script>
+</body>
+</html>

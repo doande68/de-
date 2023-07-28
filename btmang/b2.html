@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [1,6,3,9,15,12,18,14]
+//   let max = a[0]
+//   let index =0
+//   for (let i = 1; i < a.length; i++) {
+//     if(a[i]> max ){
+//       max = a[i]
+//       index = i
+//     }
+//   }
+// console.log(max,index)
+
+
+
+  // for (let i = 0; i < a.length; i++) {
+  //   if(a[i] %5===0 ){
+  //      console.log(a[i])
+  //   }
+  // }
+
+  let count = 0
+   let tong = 0
+   for( let i= 0; i< a.length; i++){
+      if (a[i]% 5===0){
+          tong += a[i]; count ++
+      }
+   }
+  console.log(tong/count)
+</script>
+</body>
+</html>
