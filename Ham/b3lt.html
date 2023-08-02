@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số thứ nhất<input type="text " id="a"></p>
+<p>Nhập số thứ hai<input type="text"  id="b"></p>
+<button onclick="kiemtra()">So sánh</button>
+<script>
+function number(a , b){
+    if( a>b){
+        alert("Số thứ nhất lớn hơn số thứ 2")
+    }else {
+        return a + b
+    }
+}
+function kiemtra(){
+    let a = +document.getElementById('a').value
+    let b = +document.getElementById('b').value
+    let result = number(a , b)
+    if (result != undefined){
+        alert("kết quả " + result)
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập mảng :")
+
+    function tongPhanTu(arr) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        return sum
+    }
+
+    document.write("Tổng các phần tử bằng :" + tongPhanTu(arr))
+
+
+    function tongPhanTuLe(arr) {
+        let sum1 = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                sum += arr[i]
+            }
+            return sum1
+        }
+    }
+
+    document.write("Tổng các phần tử lẻ : " + tongPhanTuLe(arr))
+
+
+    function soLuongPhanTuLe(arr) {
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                count += arr[i]
+            }
+            return count
+        }
+    }
+
+    document.write("Số lượng các phần tử lẻ là " + soLuongPhanTuLe(arr))
+
+
+    function tinhTBPhanTuLe(arr) {
+        let a = tongPhanTuLe(arr) / soLuongPhanTuLe(arr)
+    }
+
+    document.write("Trung bình cộng các phần tử lẻ :" + a)
+
+
+    function timSoX(arr, x) {
+        let check = true
+        let index
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                index = i
+                check = false
+                break;
+            }
+        }
+        if (check) {
+            result index
+        } else {
+            result - 1
+        }
+    }
+    document.write(`Vị trí của số ${x} trong mảng là ${timSoX(arr, x)}`);
+
+    function nhapMang(arr){
+        let Arr = arr.slice('')
+        result Arr
+    }
+
+    function phanTuMax(arr){
+        let max = arr[i]
+        for (let i = 0; i < arr.length; i++) {
+            if( arr[i] > max){
+                max = arr[i]
+            }
+        }
+        document.write("vị trí của phần tử max = ")
+        for (let i = 0; i < arr.length; i++) {
+            if( arr[i] == max){
+                console.log(`${i}`)
+            }
+        }
+    }
+
+let so = +prompt("nhập số bất kì")
+    function kiemTraSNT(){
+        if()
+    }
+</script>
+</body>
+</html>
