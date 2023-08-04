@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Chuẩn bị:
+
+        -Đối tượng :
+          + Mỗi  đối tượng có những thuộc tính hay những đặc điểm hay mô tả những hành vi riêng nhằm phân biệt nó với các đối tượng khác.
+
+        - Thuộc tính:
+          + Thuộc tính là những đặc trưng của  đối tượng, thể hiện thông qua những giá trị cụ thể .
+        - Hành vi :
+          + Hành vi là những cách thức mà qua đó đối tượng thể hiện sự hoạt động hay chức năng của chúng.
+        - Lớp:
+          + Lớp là khái niệm dùng để mô tả một loại đối tượng có những thuộc  tính, hành vi và những mối quan hệ thông thường tương tự nha.
+          + Thuật ngữ lớp có thể hiểu là cách nói vắn tắt của cụm từ “lớp các đối tượng ”
+          + Như vậy mỗi đỗi tượng đc coi như là 1 thể hiện của lớp với những giá trị thuộc tính cũng như cách thức hoạt động đặc trưng .
+
+        Lập trình hướng đối tượng là gì? Object-oriented programming - OOP)
+
+          • Không tập trung vào cấu trúc như ngôn ngữ thủ tục, mà tập trung vào  mô hình hoá dữ liệu (data modeling)
+
+          • Lập trình viên sử dụng các Lớp (class) khi lập trình
+          • Mô phỏng các đối tượng trong thế giới thực vào trong các chương trình.
+          • Class: khuôn mẫu của dữ liệu được mô hình hoá
+          • Ví dụ: C++, C#, Java, PHP, Javascript ....
+
+          • OOP (Object Oriented Programming) là một triết lý thiết kế chương trình
+          • Có nhiều ngôn ngữ lập trình hỗ trợ OOP
+          • Tất cả mọi thứ trong OOP đều là “đối tượng”. Một chương trình phần mềm  được coi như là một thế giới bao gồm các đối tượng tương tác với nhau.
+          • Mã lệnh và dữ liệu được kết hợp trong một thể thống nhất – đó là đối tượng.
+          • Đối tượng bao gồm:
+               • Thuộc tính: các dữ liệu, tính chất của đối tượng
+               • Hành vi: các khả năng, hành động mà đối tượng có thể thực hiện
+               • Các đối tượng có thể có quan hệ với nhau
+
+    - Khai báo đối tượng :
+    Cú pháp :
+       let objectName = {}
+    hoặc :
+       let objectName = { property1: value1, property2: value2,...};
+
+    - Ví dụ:
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue
+        }
+    - Định nghĩa lớp :
+     + Tạo lớp với thuộc tính và phương thức
+    function person(firstName, lastName, age, eyeColor) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.changeName = function (name) {
+            this.lastName = name;
+        }
+    };
+    + tạo đối tượng
+        let myfriend = new person("Duc","20","Football")
+
+    - Sử dụng thuộc tính
+        + Truy xuất giá trị của đối tượng
+        + Sử dụng câu lệnh for-in để truy xuất đến tất cả các thuộc tính của đối tượng
+            objectName["property"]        // person['age'];
+
+            let person = {fname:"John", lname:"Doe", age:25};
+               for (x in person) {
+                    txt += person[x];
+               }
+     - Sử dụng phương thức:
+        + Gọi 1 phương thức của đối tượng
+            objectName.methodName(parameters);
+        + Truyền tham số khi gọi phương thức của đối tượng
+    myfriend.changeName('Duc');
+</script>
+</body>
+</html>
