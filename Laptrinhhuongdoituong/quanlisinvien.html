@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P> Danh Sách Sinh Viên </P>
+<input type="text" placeholder="Nhập họ tên sinh viên" id="them">
+<button onclick="create()">Thêm</button>
+<br><br>
+<table border="1" cellspacing="0" cellpadding="3">
+    <tr>
+        <th>Họ và tên</th>
+        <th colspan="2">Sửa / Xóa</th>
+    </tr>
+    <tbody id="students">
+    <tr>
+        <td>Doãn Đình Đề</td>
+        <td>
+            <button> Sửa</button>
+        </td>
+        <td>
+            <button> Xóa</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<div id="edit">
+
+</div>
+<script>
+    let students = ['Doãn Đình Đề', 'Lê Minh Đức', 'Bùi Thị Mai', 'Nguyễn Mạnh Hùng']
+
+    function showAll() {
+        let str = '';
+        for (let i = 0; i < students.length; i++) {
+            str += `
+            <tr>
+             <td>${students[i]}</td>
+             <td> <button onclick="suaSv(${i})"> Sửa </button> </td>
+             <td> <button onclick="remove(${i})"> Xóa </button> </td>
+         </tr>
+            `
+        }
+        document.getElementById('students').innerHTML = str
+    }
+
+    showAll();
+
+    function create() {
+        let student = document.getElementById('them').value
+        students.push(student)
+        showAll();
+    }
+
+    function remove(index) {
+        students.splice(index, 1)
+        showAll();
+    }
+    function suaSv(index){
+        let stdudenEdit = document[index]
+        let  html = `
+        <input type="text" value="${stdudenEdit}" id="studentEdit">
+        <button onclick="edit(${index})"> Save </button>
+        `
+        document.getElementById('edit').innerHTML = html
+    }
+  function edit(index){
+   let newstudent = document.getElementById('studentEdit').value
+      students[index] = newstudent;
+   showAll()
+  }
+</script>
+</body>
+</html>

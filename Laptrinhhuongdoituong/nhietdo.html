@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Temperature {
+    doC;
+    doF;
+    doKenvin;
+    constructor(doCInput) {
+      this.doC = doCInput
+    }
+    getdoC(){
+      return this.doC
+    }
+    getdoF(){
+      this.doF = this.doC * 9/5 + 32
+      return this.doF
+    }
+    getdoKenvin(){
+      this.doKenvin = this.doC + 273
+        return this.doKenvin
+    }
+    setdoC(doC){
+        this.doC = doC
+    }
+  }
+  function main(){
+      let nhietdo = new Temperature( 30)
+      nhietdo.setdoC(15)
+      alert("Độ F =" + nhietdo.getdoF())
+      alert("Độ K =" + nhietdo.getdoKenvin())
+  }
+  main()
+</script>
+</body>
+</html>

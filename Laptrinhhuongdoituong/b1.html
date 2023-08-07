@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Rectangle{
+    length;
+    width ;
+    acrea;
+    perimeter;
+    constructor(lengthInput,widthInput) {
+      this.length = lengthInput;
+      this.width = widthInput;
+    }
+    getArea(){
+      return this.length * this.width;
+    }
+    getPerimeter(){
+        return (this.length + this.width ) * 2
+    }
+    getInfo(){
+        return this.length  + '_' + this.width
+    }
+    setLength(length){
+        this.length = length
+    }
+    getWidth(width){
+        this.width = width
+    }
+  }
+  function main() {
+      let hcn = new Rectangle(3, 2)
+      hcn.setLength(4);
+      alert(hcn.getInfo());
+      alert('Diện tích HCN = ' + hcn.getArea());
+      alert('Chu vi HCN = ' + hcn.getPerimeter());
+  }
+ main()
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     class Student {
+         name;
+         age;
+         mark;
+
+         constructor(name, age, mark) {
+             this.name = name;
+             this.age = age;
+             this.mark = mark;
+         }
+
+         setName(name) {
+             this.name = name;
+         }
+
+         setAge(age) {
+             this.age = age;
+         }
+
+         setMark(mark) {
+             this.mark = mark;
+         }
+
+         getName() {
+             return this.name;
+         }
+
+         getAge() {
+             return this.age;
+         }
+
+         getMark() {
+             return this.mark;
+         }
+
+         sumAverage(mark) {
+             let sum = 0;
+             for (let i = 0; i < this.mark.length; i++) {
+                 sum += this.mark[i];
+             }
+             return sum / this.mark.length;
+         }
+     }
+
+
+
+     function main() {
+         let sinhvien1 = new Student('Đề', 20, [5, 6, 7]);
+         let sinhvien2 = new Student('Lộc', 19, [8, 8, 9]);
+
+         let marksv1 = sinhvien1.getMark();
+         let marksv2 = sinhvien2.getMark();
+         if (sinhvien1.sumAverage(marksv1) > sinhvien2.sumAverage(marksv2)) {
+             alert("Sinh viên 1 có điểm trung bình cao hơn");
+         } else if (sinhvien1.sumAverage(marksv1) < sinhvien2.sumAverage(marksv2)) {
+             alert("Sinh viên 2 có điểm trung bình cao hơn");
+         } else {
+             alert("Điểm trung bình 2 sinh viên bằng nhau");
+         }
+     }
+     main();
+
+
+
+ </script>
+</body>
+</html>
