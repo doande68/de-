@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Kind {
+        nameKind
+        featherColor
+
+        constructor(featherInput, nameKindInput) {
+            this.featherColor = featherInput
+            this.nameKind = nameKindInput
+        }
+
+        getnamekind() {
+            return this.getnamekind
+        }
+
+        getnamefeatherColor() {
+            return this.featherColor
+        }
+
+        setnamekind() {
+            this.nameKind = nameKind
+        }
+
+        setfeatherColor() {
+            this.featherColor = featherColor
+        }
+    }
+
+    class Dog {
+        nameDog
+        age
+        kinDog
+        isSick
+
+        constructor(nameDogInput, ageInput, kinInput, isSickInput) {
+            this.nameDog = nameDogInput
+            this.age = ageInput
+            this.kinDog = kinInput
+            this.isSick = isSickInput
+        }
+
+        setnameDog() {
+            this.nameDog = nameDog
+        }
+
+        setage() {
+            this.age = age
+        }
+
+        setkinDog() {
+            this.kinDog = kinDog
+        }
+
+        getnameDog() {
+            return this.nameDog
+        }
+
+        getage() {
+            return this.age
+        }
+
+        checksick() {
+            if (this.isSick) {
+                console.log(this.nameDog + '  đang ốm')
+            } else {
+                console.log(this.nameDog + ' khỏe')
+            }
+        }
+
+    }
+
+
+    function main() {
+        let loai1 = new Kind('đen', 'pub')
+        let loai2 = new Kind('trắng', 'husky')
+        let cho1 = new Dog('chó ', 10, loai1, false)
+        cho1.checksick()
+        let cho2 = new Dog('chó', 11, loai2, true)
+        cho2.checksick()
+    }
+
+    main()
+</script>
+</body>
+</html>

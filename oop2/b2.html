@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    class Product {
+        id
+        name
+        quanlity
+        price
+
+        constructor(idInput, nameInput, quanlityInput, priceInput) {
+            this.id = idInput
+            this.name = nameInput
+            this.quanlity = quanlityInput
+            this.price = priceInput
+        }
+
+        getid() {
+            return this.id
+        }
+
+        getname() {
+            return this.name
+        }
+
+        getquanlity() {
+            return this.quanlity
+        }
+
+        getprice() {
+            return this.price
+        }
+
+        setid() {
+            this.setid = id
+        }
+
+        setname() {
+            this.setname = name
+        }
+
+    }
+
+    class Store {
+        listProducts
+
+        constructor(listProductsInput) {
+            this.listProducts = []
+        }
+
+        add(newProduct) {
+            this.listProducts.push(newProduct)
+        }
+
+        remove(index) {
+            this.listProducts.splice(index, 1)
+        }
+
+        FindAll() {
+            return this.FindAll()
+        }
+
+        edit(index, newProduct) {
+            this.listProducts[index] = newProduct
+
+        }
+
+        lonhon2000(arr) {
+            let mang = []
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].getprice() > 2000) {
+                    mang.push(arr[i])
+                }
+            }
+            return mang
+        }
+    }
+
+
+    function main() {
+        let mang = new Store()
+        let product1 = new Product(1, 'Sách', 10, 2000)
+        mang.add(product1)
+
+        let product2 = new Product(2, 'Bút', 11, 1500)
+        mang.add(product2)
+
+        let product3 = new Product(3, 'Thước kẻ ', 12, 1000)
+        mang.add(product3)
+
+        let product4 = new Product(4, 'Tẩy', 13, 500)
+        mang.add(product4)
+
+        let product5 = new Product(5, 'Hộp bút', 14, 3000)
+        mang.add(product5)
+
+        let array = mang.FindAll()
+        // showProduct(array)
+        // mang.remove(3)
+        // let sua = new Product(5, 'Hộp bánh', 15, 3500)
+        // mang.edit(3, sua)
+        showProduct(mang.lonhon2000(array))
+    }
+    function showProduct(array) {
+        let str = ''
+        str += `<table border="1" cellpadding="5">
+         <td>STT</td>
+         <td>Name</td>
+         <td>Quality</td>
+         <td>Price</td>
+                        `
+        for (let i = 0; i < array.length; i++) {
+            str += `
+        <tr>
+        <td>${array[i].getid()}</td>
+        <td>${array[i].getname()}</td>
+        <td>${array[i].getquanlity()}</td>
+        <td>${array[i].getprice()}</td>
+        </tr>`
+        }
+        str += `</table>`
+        document.getElementById('result').innerHTML = str;
+    }
+
+    main()
+</script>
+</body>
+</html>
