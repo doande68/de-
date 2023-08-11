@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body style="background: url('đez/doande.jpg') ;background-size :cover ">
+
+<div id="form-add">
+</div>
+<div id="from-edit"></div>
+<center>
+    <h1>My Store </h1>
+    <button onclick="showFormAdd()">Add product</button>
+    <table border="1" style="margin-top: 50px">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td colspan="2">Action</td>
+        </tr>
+        <tbody id="product">
+        <td>1</td>
+        <td>Đề</td>
+        <td>8</td>
+        <td>1200</td>
+        <td>
+            <button style="background-color: coral">Remove</button>
+        </td>
+        <td>
+            <button style="background-color: aqua">Edit</button>
+        </td>
+        </tbody>
+    </table>
+</center>
+
+
+<script src="entity/entity.js"></script>
+<script src="manager/mânger.js"></script>
+<script src="view/view.js"></script>
+</body>
+</html>
