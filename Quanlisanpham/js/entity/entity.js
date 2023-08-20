@@ -1,45 +1,53 @@
 class Product{
-    _id
-    _name
-    _quantity
-    _price
+    id
+    name
+    img
+    quantity
+    price
 
-    constructor(id, name, quantity, price) {
-        this._id = id;
-        this._name = name;
-        this._quantity = quantity;
-        this._price = price;
+    constructor(id, name, img, quantity, price) {
+        this.id = id;
+        this.name = name;
+        this.img = img
+        this.quantity = quantity;
+        this.price = price;
     }
 
     get id() {
-        return this._id;
+        return this.id;
     }
 
     set id(value) {
-        this._id = value;
+        this.id = value;
     }
 
     get name() {
-        return this._name;
+        return this.name;
     }
 
     set name(value) {
-        this._name = value;
+        this.name = value;
+    }
+    get img(){
+        return this.img
+    }
+    set img(value){
+        this.img = value;
     }
 
     get quantity() {
-        return this._quantity;
+        return this.quantity;
     }
 
     set quantity(value) {
-        this._quantity = value;
+        this.quantity = value;
     }
 
     get price() {
-        return this._price;
+        return this.price;
     }
 
     set price(value) {
-        this._price = value;
+        this.price = value;
     }
 }

@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+  <style>
+      td {
+          text-align: center;
+      }
+  </style>
 </head>
 
-<body style="background: url('đez/doande.jpg') ;background-size :cover ">
+<body style="background: url('') ;background-size: cover">
 
 <div id="form-add">
 </div>
-<div id="from-edit"></div>
+<div id="from-edit">
+
+</div>
 <center>
-    <h1>My Store </h1>
+    <h1>My Store Doãn Đề </h1>
     <button onclick="showFormAdd()">Add product</button>
+    <br>
+    <br>
+    <input type="text" id="find">
+    <button> Search </button>
     <table border="1" style="margin-top: 50px">
         <tr>
             <td>Id</td>
             <td>Name</td>
+            <td>Img</td>
             <td>Quantity</td>
             <td>Price</td>
             <td colspan="2">Action</td>
         </tr>
         <tbody id="product">
-        <td>1</td>
-        <td>Đề</td>
-        <td>8</td>
-        <td>1200</td>
-        <td>
-            <button style="background-color: coral">Remove</button>
-        </td>
-        <td>
-            <button style="background-color: aqua">Edit</button>
-        </td>
+
         </tbody>
     </table>
 </center>

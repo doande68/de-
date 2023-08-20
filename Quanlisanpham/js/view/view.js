@@ -11,7 +11,7 @@ let store = new Store()
 //     console.log(store)
 // }
 // main()
-let array = store.fileAll()
+
 function showAll(){
     let productInStore = store.fileAll()
     let str = ``
@@ -20,26 +20,29 @@ function showAll(){
         <tr>
         <td>${productInStore[i].id}</td>
         <td>${productInStore[i].name}</td>
+        <td><img src="${productInStore[i].img}" alt=""></td>
         <td>${productInStore[i].quantity}</td>
         <td>${productInStore[i].price}</td>
-        <td><button style="background-color: coral" onclick="remove(${i})">Remove</button></td>
-        <td><button style="background-color: aqua" onclick="edit(${i})">Edit</button></td>
+        <td><button style="
+        background-color: coral" onclick="remove(${i})">Remove</button></td>
+        <td><button style="background-color: aqua" onclick="showFromEdit(${i})">Edit</button></td>
         </tr>
         `
     }
     document.getElementById("product").innerHTML = str
 }
 function add(){
-    let id = document.getElementById("id").value
+    let id = +document.getElementById("id").value
     let name  = document.getElementById("name").value
-    let quantity = document.getElementById("quantity").value
-    let price = document.getElementById("price").value
-    let newProduct = new Product(id,name,quantity,price)
+    let img = document.getElementById('img').value
+    let quantity = +document.getElementById("quantity").value
+    let price = +document.getElementById("price").value
+    let newProduct = new Product(id,name,img,quantity,price)
     store.add(newProduct)
     console.log(store)
     alert(" Add Success")
     showAll()
-    document.getElementById('from-add').innerHTML= []
+    document.getElementById('form-add').innerHTML= '';
 }
 function showFormAdd() {
     document.getElementById('form-add').innerHTML = `
@@ -55,6 +58,10 @@ function showFormAdd() {
     <td><input type="text" id="name"></td>
   </tr>
   <tr>
+    <td>Img</td>
+    <td><input type="text" id="img"></td>
+  </tr>
+  <tr>
     <td>Quantity</td>
     <td><input type="number" id="quantity"></td>
   </tr>
@@ -68,6 +75,7 @@ function showFormAdd() {
 </table>
 </center>
     `
+
 }
 function remove(index) {
     let isConfirm = confirm("Bạn muốn xóa không ?")
@@ -76,37 +84,54 @@ function remove(index) {
         showAll();
     }
 }
-
-function edit(index){
-    let id = document.getElementById("id1").value
-    let name  = document.getElementById("name1").value
-    let quantity = document.getElementById("quantity1").value
-    let price = document.getElementById("price1").value
-    let ediProduct = new Product(id,name,quantity,price)
-    store.edit(index,ediProduct)
-    showAll()
+function search(){
+    let nameproduct = prompt("Nhập tên sản phẩm cần tìm :");
+    let str = ''
+    for (let i = 0; i <array.length ; i++) {
+        if (store.search(i, name_product) !== -1){
+            str += `
+             <tr>
+        <td>${array[i].id}</td>
+        <td>${array[i].name}</td>
+        <td><img src="${productInStore[i].img}" alt=""></td>
+        <td>${array[i].quantity}</td>
+        <td>${array[i].price}</td>
+        <td><button style=" background-color: coral" onclick="remove(${i})">Remove</button></td>
+        <td><button style="background-color: aqua" onclick="showFromEdit(${i})">Edit</button></td>
+        </tr>
+            `
+        }
+    }
+    document.getElementById('find').innerHTML = str
 }
 
-function showFromEdit(){
-    document.getElementById('from-edit').innerHTML `
-     <h1>Edit product</h1>
+function showFromEdit(index){
+    let productInStore = store.fileAll();
+    let productEdit = productInStore[index]
+    document.getElementById('from-edit').innerHTML = `
+<center>
+     <h1>Edit Product</h1>
           <table style="border: 1px solid black">
             <tr>
                 <td>Id:</td>
-                <td><input type="number" value="${newProduct.id}" id="id"></td>
+                <td><input type="number" value="${productEdit.id}" id="idedit"></td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><input type="text" value="${newProduct.name}" id="name"></td>
+                <td><input type="text" value="${productEdit.name}" id="nameedit"></td>
+            </tr>
+            <tr>
+                <td>Img:</td>
+                <td><input type="text" value="${productEdit.img}" id="imgedit"></td>
             </tr>
             <tr>
                 <td>Quantity:</td>
-                <td><input type="number" value="${newProduct.quantity}" id="quantity"></td>
+                <td><input type="number" value="${productEdit.quantity}" id="quantityedit"></td>
 
             </tr>
             <tr>
                 <td>Price:</td>
-                <td><input type="number" value="${newProduct.price}" id="price"></td>
+                <td><input type="number" value="${productEdit.price}" id="priceedit"></td>
             </tr>
             <tr>
                 <th colspan="2">
@@ -114,7 +139,23 @@ function showFromEdit(){
                 </th>
             </tr>
         </table>
+        </center>
               `;
 
 
 }
+function edit(index){
+    let id = document.getElementById("idedit").value;
+    let name  = document.getElementById("nameedit").value;
+    let img = document.getElementById("imgedit").value;
+    let quantity = document.getElementById("quantityedit").value;
+    let price = document.getElementById("priceedit").value;
+    let newProductEdit = new Product(id,name,quantity,price)
+    store.edit(index,newProductEdit);
+    showAll()
+    alert('Edit Success')
+    document.getElementById('from-edit').innerHTML=''
+
+}
+
+showAll()
